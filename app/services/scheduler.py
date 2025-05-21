@@ -191,7 +191,7 @@ class PostScheduler:
             async with httpx.AsyncClient() as client:
                 logger.info(f"Sending post request to LinkedIn API")
                 response = await client.post(
-                    "http://127.0.0.1:8000/api/post-now/",
+                    "https://socialsyncbackend-qe4w.onrender.com/api/post-now/",
                     json={
                         "platform": "linkedin",
                         "caption": post["caption"],
