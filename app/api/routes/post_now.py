@@ -133,7 +133,7 @@ async def post_to_linkedin(account, content, image_url=None):
         # Make the API call to the LinkedIn endpoint
         async with httpx.AsyncClient() as client:
             response = await client.post(
-                "http://127.0.0.1:8000/api/linkedin/post",  # Call the LinkedIn post endpoint
+                "https://socialsyncbackend-qe4w.onrender.com/api/linkedin/post",  # Call the LinkedIn post endpoint
                 json=request_payload,
                 timeout=60  # Increase timeout for image processing
             )
