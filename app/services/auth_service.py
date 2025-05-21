@@ -161,7 +161,7 @@ async def request_password_reset(reset_request: PasswordResetRequest) -> dict:
     smtp_port = int(os.getenv("SMTP_PORT", 587))
     smtp_user = os.getenv("SMTP_USER")
     smtp_password = os.getenv("SMTP_PASSWORD")
-    app_url = os.getenv("APP_URL", "http://localhost:5173")
+    app_url = os.getenv("APP_URL", "https://social-sync-rouge.vercel.app")
 
     reset_link = f"{app_url}/reset-password?token={token}"
     subject = "SocialSync Password Reset Request"
