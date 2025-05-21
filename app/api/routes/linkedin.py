@@ -19,7 +19,7 @@ router = APIRouter()
 linkedin_service = LinkedInService()
 
 FRONTEND_REDIRECT_URI = os.getenv("FRONTEND_REDIRECT_URI",
-                                  "http://localhost:5173/social-dashboard")
+                                  "https://social-sync-rouge.vercel.app/social-dashboard")
 
 
 @router.get("/auth-url")
